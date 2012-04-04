@@ -2,9 +2,6 @@ class Hash
   # Return a new hash with all keys converted to symbols, as long as
   # they respond to +to_sym+.
   # If recursive is set to true, then keys at all levels will be symbolized.
-#  undef :symbolize_keys
-#  undef :symbolize_keys!
-
   def symbolize_keys(recursive = false)
     dup.symbolize_keys!(recursive)
   end
