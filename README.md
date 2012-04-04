@@ -23,11 +23,12 @@ or
 include it in your Gemfile and then run bundle install.
 
 Examples:
-
+```ruby
 {"a" => {"b" => 1}}.symbolize_keys = {:a => {"b" => 1}}
 {"a" => {"b" => 1}}.symbolize_keys(true) = {:a => {:b => 1}}
 {"a" => {"b" => 1}}.symbolize_keys! = {:a => {"b" => 1}}
 {"a" => {"b" => 1}}.symbolize_keys!(true) = {:a => {:b => 1}}
+```
 
 Works on Ruby 1.9.2-p290, 1.9.3-p125, ActiveSupport version 3.2.2 as of now.
 
