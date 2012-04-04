@@ -25,8 +25,11 @@ include it in your Gemfile and then run bundle install.
 Examples:
 ```ruby
 {"a" => {"b" => 1}}.symbolize_keys = {:a => {"b" => 1}}
+
 {"a" => {"b" => 1}}.symbolize_keys(true) = {:a => {:b => 1}}
+
 {"a" => {"b" => 1}}.symbolize_keys! = {:a => {"b" => 1}}
+
 {"a" => {"b" => 1}}.symbolize_keys!(true) = {:a => {:b => 1}}
 ```
 
