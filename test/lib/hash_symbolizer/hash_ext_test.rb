@@ -8,9 +8,9 @@ class HashExtTest < Test::Unit::TestCase
     @mixed   = { :a  => 1, 'b' => 2 }
     @fixnums = {  0  => 1,  1  => 2 }
     @illegal_symbols = { [] => 3 }
-    @nested_hash = { 'a' => {'b' => 2} }
-    @nested_hash_first_level_symbolized = { :a => { 'b' => 2 } }
-    @nested_hash_all_keys_symbolized = { :a => { :b => 2 } }
+    @nested_hash = { 'a' => { 'b' => 2 }, 'c' => [ { 'd' => 3 } ] }
+    @nested_hash_first_level_symbolized = { :a => { 'b' => 2 }, :c => [ { 'd' => 3 } ] }
+    @nested_hash_all_keys_symbolized = { :a => { :b => 2 }, :c => [ { :d => 3 } ] }
   end
 
   def test_methods
