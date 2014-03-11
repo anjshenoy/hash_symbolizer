@@ -13,6 +13,11 @@ class Hash
     keys.each do |key|
       value = delete(key)
       key = key.respond_to?(:to_sym) ? key.to_sym : key
+      if value.is_a?(Array)
+        value = value.map do |sub_value|
+          (recursive && sub_value.is_a?(Hash)) ? sub_value.dup.symbolize_keys!(recursive) : sub_value
+        end
+      end
       self[key] = (recursive && value.is_a?(Hash)) ? value.dup.symbolize_keys!(recursive) : value
     end
     self
